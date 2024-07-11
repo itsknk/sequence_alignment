@@ -62,7 +62,7 @@ The Smith-Waterman algorithm is a local alignment algorithm used to find the bes
     python app.py
     ```
 
-## Usage
+### Usage
 
 1. Open your web browser and navigate to `http://127.0.0.1:5000`.
 2. Upload two FASTA files containing the sequences you want to align.
@@ -70,7 +70,7 @@ The Smith-Waterman algorithm is a local alignment algorithm used to find the bes
 4. Click the "Align" button.
 5. View the alignment results and score on the results page.
 
-## File Descriptions
+### File Descriptions
 
 - `app.py`: The main Flask application file.
 - `templates/index.html`: The main page template for uploading files and selecting the algorithm.
@@ -78,3 +78,7 @@ The Smith-Waterman algorithm is a local alignment algorithm used to find the bes
 - `static/style.css`: The CSS file for styling the web pages.
 - `algorithms/needleman_wunsch.py`: Implementation of the Needleman-Wunsch algorithm.
 - `algorithms/smith_waterman.py`: Implementation of the Smith-Waterman algorithm.
+
+
+### LICENSE
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/itsknk/sequence_alignment/blob/master/LICENSE) file for details.
