@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence Alignment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sequence Alignment</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file1">FASTA file 1:</label>
+        <input type="file" name="file1" id="file1" accept=".fa,.fasta" required>
+        
+        <label for="file2">FASTA file 2:</label>
+        <input type="file" name="file2" id="file2" accept=".fa,.fasta" required>
+        
+        <label for="algorithm">Algorithm:</label>
+        <select name="algorithm" id="algorithm" required>
+            <option value="needleman">Needleman-Wunsch</option>
+            <option value="smith">Smith-Waterman</option>
+        </select>
+        
+        <input type="submit" value="Align">
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
